@@ -7,10 +7,9 @@ APPLICATION NAME: "GCO Schedule System"
 Author:  Blake Heller
 Contact: bhelle8@wgu.edu / 702-689-5399
 
+The primary README file is stored within the main project directory.
 
 -------------------------------------------------------
-
-Directions can be reached inside the main project directory file. 
 
 This project demonstrates my Java, JavaFX, and SQL knowledge to create an application with a graphical interface that manages appointment and customer data for a small business. 
 
