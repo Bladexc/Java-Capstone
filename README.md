@@ -5,6 +5,7 @@ Capstone project showcasing Java, JavaFx, and SQL integration.
 APPLICATION NAME: "GCO Schedule System"
 
 Author:  Blake Heller
+
 Contact: Blake.Dipasqua.Heller@gmail.com / 702-689-5399
 
 The primary README file is stored within the main project directory.
