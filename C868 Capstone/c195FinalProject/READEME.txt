@@ -2,7 +2,8 @@
 APPLICATION NAME: "GCO Schedule System"
 
 Author:  Blake Heller
-Contact: bhelle8@wgu.edu / 702-689-5399
+
+Contact: Blake.Dipasqua.Heller@gmail.com / 702-689-5399
 
 
 -------------------------------------------------------
