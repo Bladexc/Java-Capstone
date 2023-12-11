@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.scheduler.c195finalproject.controller.ReportMenuController">
+   <children>
+      <VBox prefHeight="800.0" prefWidth="1000.0">
+         <children>
+            <HBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="50.0" prefWidth="1000.0">
+               <children>
+                  <Label text="Reports" textFill="#ff7700">
+                     <font>
+                        <Font name="System Bold" size="30.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="50.0" top="5.0" />
+                     </HBox.margin></Label>
+               </children>
+            </HBox>
+            <HBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="350.0" prefWidth="1000.0">
+               <children>
+                  <VBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="350.0" prefWidth="400.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="50.0" prefWidth="400.0">
+                           <children>
+                              <Label text="Appointment Type Totals">
+                                 <HBox.margin>
+                                    <Insets left="50.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="23.0" />
+                                 </font></Label>
+                           </children>
+                        </HBox>
+                        <TableView fx:id="typeReportTableView" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="250.0" prefWidth="300.0">
+                          <columns>
+                            <TableColumn fx:id="typeMonthCol" prefWidth="75.0" text="Month" />
+                            <TableColumn fx:id="typeTypeCol" prefWidth="160.0" text="Appointment Type" />
+                              <TableColumn fx:id="typeCountCol" prefWidth="65.0" text="Count" />
+                          </columns>
+                           <VBox.margin>
+                              <Insets left="50.0" right="50.0" />
+                           </VBox.margin>
+                        </TableView>
+                        <HBox layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="50.0" prefWidth="400.0" />
+                     </children>
+                  </VBox>
+                  <VBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="350.0" prefWidth="600.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="50.0" prefWidth="600.0">
+                           <children>
+                              <Label text="Appointments Per Customer">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="23.0" />
+                                 </font></Label>
+                           </children>
+                        </HBox>
+                        <TableView fx:id="customerReportTableView" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="250.0" prefWidth="550.0">
+                          <columns>
+                            <TableColumn fx:id="customerCustomerIdCol" prefWidth="75.0" text="Customer ID" />
+                            <TableColumn fx:id="customerTitleCol" prefWidth="100.0" text="Title" />
+                              <TableColumn fx:id="customerTypeCol" prefWidth="135.0" text="Type" />
+                              <TableColumn fx:id="customerStartCol" prefWidth="120.0" text="Start Date &amp; Time" />
+                              <TableColumn fx:id="customerEndCol" prefWidth="120.0" text="End Date &amp; Time" />
+                          </columns>
+                           <VBox.margin>
+                              <Insets right="50.0" />
+                           </VBox.margin>
+                        </TableView>
+                        <HBox alignment="CENTER_RIGHT" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="50.0" prefWidth="600.0">
+                           <children>
+                              <Label text="Selected Customer:">
+                                 <HBox.margin>
+                                    <Insets right="25.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="customerComboPicker" maxHeight="-Infinity" maxWidth="-Infinity" onAction="#onActionSetCustomer" prefWidth="150.0" />
+                           </children>
+                           <VBox.margin>
+                              <Insets right="50.0" />
+                           </VBox.margin></HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="350.0" prefWidth="1000.0">
+               <children>
+                  <VBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="350.0" prefWidth="1000.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="50.0" prefWidth="1000.0">
+                           <children>
+                              <Label text="Schedule Per Contact">
+                                 <font>
+                                    <Font size="23.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="50.0" />
+                                 </HBox.margin></Label>
+                           </children>
+                        </HBox>
+                        <TableView fx:id="contactReportTableView" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="250.0" prefWidth="900.0">
+                          <columns>
+                            <TableColumn fx:id="contactAppointmentIdCol" prefWidth="100.0" text="Appointment ID" />
+                            <TableColumn fx:id="contactTitleCol" prefWidth="150.0" text="Title" />
+                              <TableColumn fx:id="contactTypeCol" prefWidth="100.0" text="Type" />
+                              <TableColumn fx:id="contactDescriptionCol" prefWidth="150.0" text="Description" />
+                              <TableColumn fx:id="contactStartCol" prefWidth="150.0" text="Start Date &amp; Time" />
+                              <TableColumn fx:id="contactEndCol" prefWidth="150.0" text="End Date &amp; Time" />
+                              <TableColumn fx:id="contactCustomerIdCol" prefWidth="100.0" text="Customer ID" />
+                          </columns>
+                           <VBox.margin>
+                              <Insets left="50.0" right="50.0" />
+                           </VBox.margin>
+                        </TableView>
+                        <HBox alignment="CENTER_RIGHT" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="50.0" prefWidth="1000.0">
+                           <children>
+                              <Label text="Selected Contact:">
+                                 <HBox.margin>
+                                    <Insets right="25.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Label>
+                              <ComboBox fx:id="contactComboPicker" maxHeight="-Infinity" maxWidth="-Infinity" onAction="#onActionSetContact" prefWidth="150.0">
+                                 <HBox.margin>
+                                    <Insets left="20.0" right="50.0" />
+                                 </HBox.margin></ComboBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="100.0" prefWidth="1000.0">
+               <children>
+                  <Button alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#onActionRefresh" prefHeight="35.0" prefWidth="150.0" text="Refresh">
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin></Button>
+                  <Button alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#onActionDisplayMain" prefHeight="35.0" prefWidth="150.0" text="Exit">
+                     <HBox.margin>
+                        <Insets right="50.0" />
+                     </HBox.margin></Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

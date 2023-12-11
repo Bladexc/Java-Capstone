@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.scheduler.c195finalproject.controller.LoginController">
+   <children>
+      <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="200.0" prefWidth="400.0">
+         <children>
+            <Label fx:id="loginLabel" alignment="CENTER" text="Login" textAlignment="CENTER" textFill="#ff7700">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+               <padding>
+                  <Insets bottom="5.0" top="5.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="usernameText" maxHeight="-Infinity" maxWidth="-Infinity" prefWidth="220.0" promptText="Username">
+               <VBox.margin>
+                  <Insets bottom="10.0" top="5.0" />
+               </VBox.margin>
+            </TextField>
+            <PasswordField fx:id="passwordText" maxHeight="-Infinity" maxWidth="-Infinity" prefWidth="220.0" promptText="Password">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </PasswordField>
+            <Button fx:id="loginButton" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#onActionLogin" prefHeight="35.0" prefWidth="220.0" text="Login">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </Button>
+            <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="zoneIdLabel" text="Zone ID:">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="zoneIdText" text="Zone Data" underline="true">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
